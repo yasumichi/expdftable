@@ -111,4 +111,8 @@ if __name__ == '__main__':
     if len(argv) == 6:
         join = eval(argv[5])
     
-    expdftable(pdf, excel, start, end, join)
+    try:
+        expdftable(pdf, excel, start, end, join)
+    except Exception as ex:
+        print(ex)
+
