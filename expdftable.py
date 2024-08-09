@@ -11,6 +11,7 @@ from os import path
 import fitz
 import pandas as pd
 from styleframe import StyleFrame
+from translation import init_translation
 
 def to_float(obj):
     """
@@ -57,7 +58,7 @@ def expdftable(pdf, excel, start, end, join=False):
     """
     
     if not path.exists(pdf):
-        raise Exception(f"{pdf}: No such file")
+        raise Exception(_("{pdf}: No such file").format(pdf=pdf))
     
     doc = fitz.open(pdf)
     
@@ -68,7 +69,7 @@ def expdftable(pdf, excel, start, end, join=False):
             dataFrames.append(table.to_pandas().map(to_float))
     
     if len(dataFrames) == 0:
-        raise Exception('Tables not found.')
+        raise Exception(_('Tables not found.'))
             
     if join:
         sf = StyleFrame(pd.concat(dataFrames, ignore_index=True))
@@ -95,10 +96,12 @@ def usage():
     None.
 
     """
-    print(f"Usage: {argv[0]} pdf excel start end [join]")
+    print(_("Usage: {myname} pdf excel start end [join]").format(myname=argv[0]))
     exit()
 
 if __name__ == '__main__':
+    init_translation()
+
     if len(argv) != 5 and len(argv) != 6:
         usage()
         
