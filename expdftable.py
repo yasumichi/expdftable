@@ -71,7 +71,7 @@ def expdftable(pdf, excel, start, end, join=False):
         raise Exception('Tables not found.')
             
     if join:
-        sf = StyleFrame(pd.concat(dataFrames))
+        sf = StyleFrame(pd.concat(dataFrames, ignore_index=True))
         with StyleFrame.ExcelWriter(excel) as writer:
             sf.to_excel(writer)
     else:
