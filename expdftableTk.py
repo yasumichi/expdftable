@@ -19,6 +19,7 @@ from tkinter import (
 )
 
 from tkinter.ttk import Checkbutton, Spinbox
+from translation import init_translation
 
 class App(Frame):
     def __init__(self, master=None):
@@ -30,9 +31,9 @@ class App(Frame):
         self.initOutFile()
         
         self.join = BooleanVar(value=False)
-        Checkbutton(self, text='Join all tables',variable=self.join).pack()
+        Checkbutton(self, text=_('Join all tables'),variable=self.join).pack()
         
-        Button(self, text='Extract', command=self.extractButtonClick).pack()       
+        Button(self, text=_('Extract'), command=self.extractButtonClick).pack()       
     
     def initInFile(self):
         frm = Frame(self)
@@ -43,19 +44,19 @@ class App(Frame):
         self.inFile = StringVar()
         self.inFileEntry = Entry(frm, textvariable=self.inFile, width=50).pack(side=tk.LEFT)
         
-        Button(frm, text='Reffer', command=self.inFileButtonClick).pack(side=tk.LEFT)
+        Button(frm, text=_('Reffer'), command=self.inFileButtonClick).pack(side=tk.LEFT)
     
     def initPageControl(self):
         frm = Frame(self)
         frm.pack()
         
-        Label(frm, text='Start').pack(side=tk.LEFT)
+        Label(frm, text=_('Start')).pack(side=tk.LEFT)
         self.start = IntVar(value=1)
         self.start.trace('w', self.startChanged)
         self.startSpin = Spinbox(frm, from_=1, to=1, textvariable=self.start)
         self.startSpin.pack(side=tk.LEFT)
 
-        Label(frm, text='End').pack(side=tk.LEFT)
+        Label(frm, text=_('End')).pack(side=tk.LEFT)
         self.end = IntVar(value=1)
         self.end.trace('w', self.endChanged)
         self.endSpin = Spinbox(frm, from_=1, to=1, textvariable=self.end)
@@ -70,7 +71,7 @@ class App(Frame):
         self.outFile = StringVar()
         self.outFileEntry = Entry(frm, textvariable=self.outFile, width=50).pack(side=tk.LEFT)
         
-        Button(frm, text='Reffer', command=self.outFileButtonClick).pack(side=tk.LEFT)
+        Button(frm, text=_('Reffer'), command=self.outFileButtonClick).pack(side=tk.LEFT)
         
     
     def inFileButtonClick(self):
@@ -106,11 +107,11 @@ class App(Frame):
         
         if len(pdf) == 0:
             isError = True
-            errorMessage = errorMessage + "- no selct pdf file.\n"
+            errorMessage = errorMessage + _("- no selct pdf file.\n")
             
         if len(excel) == 0:
             isError = True
-            errorMessage = errorMessage + "- no select excel file.\n"
+            errorMessage = errorMessage + _("- no select excel file.\n")
 
         if isError:
             messagebox.showerror(title='expdftableTk', message=errorMessage)
@@ -118,11 +119,12 @@ class App(Frame):
         
         try:
             expdftable(pdf, excel, start, end, join)
-            messagebox.showinfo(title='expdftableTk', message='Complete extract')
+            messagebox.showinfo(title='expdftableTk', message=_('Complete extract'))
         except Exception as ex:
             messagebox.showerror(title='expdftableTk', message=ex)
 
 
+init_translation()
 root = Tk()
 root.title('Extract tables from PDF to Excel Book')
 myapp = App(root)
