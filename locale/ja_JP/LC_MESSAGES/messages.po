@@ -1,0 +1,63 @@
+# expdftable
+# Copyright (C) 2024 Yasumichi Akahoshi
+# This file is distributed under the same license as the expdftable package.
+# Yasumichi Akahoshi <sekiseijuju@gmail.com>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: expdftable 0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-10 12:57+0900\n"
+"PO-Revision-Date: 2024-08-09 22:09+0900\n"
+"Last-Translator: Yasumichi Akahoshi <sekiseijuju@gmail.com>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: expdftable.py:61
+#, python-brace-format
+msgid "{pdf}: No such file"
+msgstr "{pdf}: ファイルが存在しません。"
+
+#: expdftable.py:72
+msgid "Tables not found."
+msgstr "表が見つかりません。"
+
+#: expdftable.py:99
+#, python-brace-format
+msgid "Usage: {myname} pdf excel start end [join]"
+msgstr ""
+"使い方: {myname} PDFファイル名 EXCELファイル名 開始ページ 終了ページ [結合]"
+
+#: expdftableTk.py:34
+msgid "Join all tables"
+msgstr "すべての表を結合する"
+
+#: expdftableTk.py:36
+msgid "Extract"
+msgstr "抽出"
+
+#: expdftableTk.py:47 expdftableTk.py:74
+msgid "Reffer"
+msgstr "参照"
+
+#: expdftableTk.py:53
+msgid "Start"
+msgstr "開始"
+
+#: expdftableTk.py:59
+msgid "End"
+msgstr "終了"
+
+#: expdftableTk.py:110
+msgid "- no selct pdf file.\n"
+msgstr "●PDFファイルが選択されていません。\n"
+
+#: expdftableTk.py:114
+msgid "- ●Excelファイルが選択されていません。\n"
+msgstr ""
+
+#: expdftableTk.py:122
+msgid "Complete extract"
+msgstr "抽出が完了しました。"
