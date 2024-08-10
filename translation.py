@@ -17,7 +17,6 @@ def init_translation():
     translater = gettext.translation(
         'messages',                   # domain: name of dictionary file
         localedir=path_to_locale_dir, # Directory to place translation files
-        languages=['ja_JP'],          # Language used for translation
         fallback=True                 # If .mo file is not found, output untranslated string
     )
 
