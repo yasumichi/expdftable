@@ -99,7 +99,7 @@ def usage():
     print(_("Usage: {myname} pdf excel start end [join]").format(myname=argv[0]))
     exit()
 
-if __name__ == '__main__':
+def main():
     init_translation()
 
     if len(argv) != 5 and len(argv) != 6:
@@ -119,3 +119,6 @@ if __name__ == '__main__':
     except Exception as ex:
         print(ex)
 
+
+if __name__ == '__main__':
+    main()
