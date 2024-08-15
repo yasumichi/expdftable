@@ -33,10 +33,10 @@ expdftableTk = "expdftable.expdftableTk:main"
 include-package-data = true
 
 [tool.setuptools.packages.find]
-where = ["expdftable/locale"]
+#where = ["expdftable/locale"]
 
 [tool.setuptools.package-data]
-locale = ["*.mo"]
+#locale = ["*.mo"]
 
 [tool.setuptools-gettext]
 # directory in which the .po files can be found
