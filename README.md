@@ -1,33 +1,18 @@
 # expdftable
 extract tables from pdf to excel powered by PyMuPDF
 
-## Initial setup
-
-- Clone this repository
+## Install
 
 ```
 $ git clone https://github.com/yasumichi/expdftable.git
-```
-
-- Install requirement packages
-
-```
 $ cd expdftable
-$ pip install -r requirements.txt
-```
-
-or 
-
-```
-$ cd expdftable
-$ pipenv install
-$ pipenv shell
+$ pip install .
 ```
 
 ## Usage of CUI interface
 
 ```
-$ python expdftable.py pdf excel start end [join]
+$ xpdftable pdf excel start end [join]
 ```
 
 | argument | comment |
@@ -41,7 +26,7 @@ $ python expdftable.py pdf excel start end [join]
 ## Usage of GUI interface
 
 ```
-$ python expdftableTk.py
+$ expdftableTk
 ```
 
 ![expdftableTk](https://github.com/user-attachments/assets/1109e0c4-7834-41e9-b3f7-58c4b9d209c3)
