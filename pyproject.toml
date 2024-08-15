@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools", "setuptools-gettext"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "expdftable"
+authors = [
+    {name = "Yasumichi Akahoshi", email = "sekiseijuju@gmail.com"},
+]
+description = "extract tables from pdf to excel powered by PyMuPDF"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["one", "two"]
+license = {text = "AGPL-3.0"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "pymupdf",
+    "styleframe",
+]
+version = "0.1.0"
+#dynamic = ["version"]
+
+[project.scripts]
+expdftable = "expdftable.expdftable:main"
+
+[project.gui-scripts]
+expdftableTk = "expdftable.expdftableTk:main"
+
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["expdftable"]
+
+[tool.setuptools.package-data]
+locale = ["*.mo"]
+
+[tool.setuptools-gettext]
+# directory in which the .po files can be found
+source_dir = "expdftable/locale"
+# directory in which the generated .mo files are placed when building
+build_dir = "expdftable/locale"

@@ -8,6 +8,8 @@ pymupdf = "*"
 styleframe = "*"
 
 [dev-packages]
+setuptools = "*"
+build = "*"
 
 [requires]
 python_version = "3.12"

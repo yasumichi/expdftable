@@ -9,7 +9,7 @@ Created on Sun Aug  4 20:39:44 2024
 
 from os import path
 
-from expdftable import expdftable
+from .expdftable import expdftable
 import fitz
 
 import tkinter as tk
@@ -19,7 +19,7 @@ from tkinter import (
 )
 
 from tkinter.ttk import Checkbutton, Spinbox
-from translation import init_translation
+from .translation import init_translation
 
 class App(Frame):
     def __init__(self, master=None):

@@ -11,7 +11,7 @@ from os import path
 import fitz
 import pandas as pd
 from styleframe import StyleFrame
-from translation import init_translation
+from .translation import init_translation
 
 def to_float(obj):
     """
