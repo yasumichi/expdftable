@@ -124,9 +124,12 @@ class App(Frame):
             messagebox.showerror(title='expdftableTk', message=ex)
 
 
-init_translation()
-root = Tk()
-root.title('Extract tables from PDF to Excel Book')
-myapp = App(root)
-myapp.mainloop()
+def main():
+    init_translation()
+    root = Tk()
+    root.title('Extract tables from PDF to Excel Book')
+    myapp = App(root)
+    myapp.mainloop()
 
+if __name__ == '__main__':
+    main()
