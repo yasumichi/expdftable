@@ -33,7 +33,7 @@ expdftableTk = "expdftable.expdftableTk:main"
 include-package-data = true
 
 [tool.setuptools.packages.find]
-where = ["expdftable"]
+where = ["expdftable/locale"]
 
 [tool.setuptools.package-data]
 locale = ["*.mo"]
