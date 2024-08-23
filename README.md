@@ -12,7 +12,7 @@ $ pip install .
 ## Usage of CUI interface
 
 ```
-$ xpdftable pdf excel start end [join]
+$ expdftable pdf excel start end [join]
 ```
 
 | argument | comment |
